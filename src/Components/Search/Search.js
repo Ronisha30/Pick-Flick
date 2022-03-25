@@ -24,5 +24,5 @@ export default function Search(props) {
             {movies.map(movie => <SingleMovie key = {movie.id}movie={movie}/>)}
     </div>
     </div>
-    );
+     );
 }
