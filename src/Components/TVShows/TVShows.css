@@ -1,0 +1,13 @@
+.movie-card{
+    /* box-sizing: 20px;
+    padding: 0;
+    margin: 5px;
+    width:200px ;
+    height: 200px; */
+    width:150px;
+    height:300px;
+    padding:5px;
+    justify-content: center; 
+    
+    }
+    
