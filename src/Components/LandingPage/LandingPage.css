@@ -1,6 +1,14 @@
 .movie-list{
     display: flex;
     flex-direction: row;
-    overflow: scroll;
-  
+    overflow:scroll;
+}
+
+button{
+    background-color: white;
+}
+
+
+button::selection{
+    background-color: white;
 }

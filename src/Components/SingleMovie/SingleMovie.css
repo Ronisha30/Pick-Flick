@@ -1,11 +1,13 @@
-.movie-card{
-    width: 1000px;
-    padding: 3px;
-    margin: 20px;
-    border: 1px solid;
-  }
-  .movie-card img{
-    width: 70%;
-    
-  }
-  
+.movie-card {
+  width: 1000px;
+  padding: 10px;
+  margin: 20px;
+  border: 1px solid;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.movie-card img {
+  width: 60%;
+  height: auto;
+}
+

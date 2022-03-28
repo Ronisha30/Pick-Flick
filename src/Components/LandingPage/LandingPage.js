@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchMoviesFromDatabase } from "../../NetworkConnections";
 import SingleMovie from "../SingleMovie/SingleMovie";
 import "./LandingPage.css";
+import MovieList from "../MovieList/MovieList";
 
 export default function LandingPage(props) {
   const [movies, setMovies] = useState([]);
@@ -19,11 +20,7 @@ export default function LandingPage(props) {
 
   return (
     <div className="landing-page">
-      <div className="movie-list">
-        {movies?.map((movie) => (
-          <SingleMovie key={movie.id} movie={movie} />
-        ))}
-      </div> 
+      <MovieList movies= {movies}/>
       <div className="tv-list">
       {shows?.map((show) => (
         <SingleMovie key={show.id} movie={show} />
