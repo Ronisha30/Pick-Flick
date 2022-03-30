@@ -2,6 +2,5 @@
 
  export const fetchMoviesFromDatabase = (route, params ='')=>{
     console.log(params)
-    return fetch(`https://api.themoviedb.org/3/${route}?api_key=${API_KEY}${params}`)
-    .then(res => res.json())
+    return fetch(`https://api.themoviedb.org/3/${route}?api_key=${API_KEY}${params}`).then(res => res.json())
  }

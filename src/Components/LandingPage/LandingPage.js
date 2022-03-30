@@ -7,7 +7,13 @@ import MovieList from "../MovieList/MovieList";
 export default function LandingPage(props) {
   const [movies, setMovies] = useState([]);
   const [shows, setShows] = useState([]);
-  // const [comdey, setCodmy] = useState([]);
+  const [comedies, setComedies] = useState([]);
+
+  useEffect(() => {
+    fetchMoviesFromDatabase(props.list).then((res) => setComedies(res.results));
+  }, []);
+  console.log(comedies);
+
   useEffect(() => {
     fetchMoviesFromDatabase(props.list).then((res) => setMovies(res.results));
   }, []);
@@ -20,15 +26,12 @@ export default function LandingPage(props) {
 
   return (
     <div className="landing-page">
-    <h1>Trending</h1>
+      <h1>Trending</h1>
       <MovieList movies= {movies}/>
       <h1>TV Shows</h1>
-      <div className="tv-list">
-      {shows?.map((show) => (
-        <SingleMovie key={show.id} movie={show} />
-      ))}
-    </div>
-     
+      <MovieList movies= {shows}/>
+      <h1>Comedies</h1>
+      <MovieList movies= {comedies}/>
     </div>
   );
 }

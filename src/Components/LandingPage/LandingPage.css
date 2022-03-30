@@ -11,6 +11,6 @@ button{
 }
 
 
-button::selection{
+button:hover{
     background-color: white;
 }

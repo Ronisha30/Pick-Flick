@@ -11,7 +11,7 @@ export default function MovieList({ movies }) {
   }
     return (
     <Stack>
-      <Pagination className='page-count' onChange ={handleChange}page={page} count={Math.ceil(movies.length/6)} variant="outlined" />
+      <Pagination className='page-count' onChange ={handleChange}page={page} count={Math.ceil(movies.length/6)} variant="outlined" color = "primary" />
       <div className='movie-list'>
         {movies?.slice((page-1)*6,page* 6-1).map((movie) => (
           <SingleMovie key={movie.id} movie={movie} />
