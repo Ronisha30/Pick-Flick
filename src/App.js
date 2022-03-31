@@ -15,7 +15,7 @@ function App() {
       </div>
      
       <Routes>
-        <Route path ='/' element = {<LandingPage list = 'trending/movie/week' tvList='trending/tv/day'/>}/>
+        <Route path ='/' element = {<LandingPage list = 'trending/movie/week' tvList='trending/tv/day' comedyList='discover/movie'/>}/>
       </Routes>
     </Router>
 

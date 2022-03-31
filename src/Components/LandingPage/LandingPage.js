@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { fetchMoviesFromDatabase } from "../../NetworkConnections";
+import { fetchMoviesFromDatabase} from "../../NetworkConnections";
 import SingleMovie from "../SingleMovie/SingleMovie";
 import "./LandingPage.css";
 import MovieList from "../MovieList/MovieList";
+
+
 
 export default function LandingPage(props) {
   const [movies, setMovies] = useState([]);
   const [shows, setShows] = useState([]);
   const [comedies, setComedies] = useState([]);
 
-  useEffect(() => {
-    fetchMoviesFromDatabase(props.list).then((res) => setComedies(res.results));
-  }, []);
-  console.log(comedies);
 
+  useEffect(() => {
+    fetchMoviesFromDatabase(props.comedyList,'&with_genres=35').then((res) => setComedies(res.results));
+  }, []);
+
+  console.log(comedies)
   useEffect(() => {
     fetchMoviesFromDatabase(props.list).then((res) => setMovies(res.results));
   }, []);
@@ -25,6 +28,7 @@ export default function LandingPage(props) {
   console.log(shows);
 
   return (
+   
     <div className="landing-page">
       <h1>Trending</h1>
       <MovieList movies= {movies}/>
@@ -32,6 +36,10 @@ export default function LandingPage(props) {
       <MovieList movies= {shows}/>
       <h1>Comedies</h1>
       <MovieList movies= {comedies}/>
+      
     </div>
+ 
+
   );
 }
+
