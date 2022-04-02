@@ -14,6 +14,7 @@ export default function LandingPage(props) {
 	 */
   useEffect(() => {
     fetchMoviesFromDatabase(props.comedyList,'&with_genres=35').then((res) => setComedies(res.results));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   /**
@@ -21,6 +22,7 @@ export default function LandingPage(props) {
 	 */
   useEffect(() => {
     fetchMoviesFromDatabase(props.list).then((res) => setMovies(res.results));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 	
   /**
@@ -29,6 +31,7 @@ export default function LandingPage(props) {
 
   useEffect(() => {
     fetchMoviesFromDatabase(props.tvList).then((res) => setShows(res.results));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
 

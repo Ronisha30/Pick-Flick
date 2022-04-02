@@ -1,6 +1,5 @@
 import './App.css';
 import LandingPage from './Components/LandingPage/LandingPage';
-import MovieGenres from './Components/MovieGeners/MovieGenres';
 import React from 'react';
 import {BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 import SearchBar from './Components/Search/Search';
@@ -21,7 +20,7 @@ function App() {
     <Router>
       <div className = 'Header'>
       <SearchBar/>
-      <img src = {Netflix}/>
+      <img src = {Netflix} alt='logo'/>
       </div>
      
       <Routes>

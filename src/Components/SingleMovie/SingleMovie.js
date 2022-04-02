@@ -18,6 +18,7 @@ export default function SingleMovie(props) {
     //do some fetching
     if (movie) return;
     fetchMoviesFromDatabase(`movie/${props.id}`).then((res) => setMovie(res));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div className="movie-card">
