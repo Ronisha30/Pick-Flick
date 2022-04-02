@@ -1,0 +1,11 @@
+
+.page-count button{
+    background-color: white;
+}
+.page-count button:hover {
+    background-color: gray;
+}
+
+/* .css-lqq3n7-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected{
+    background-color:white;
+} */

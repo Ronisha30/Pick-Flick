@@ -2,10 +2,18 @@ import { useEffect, useState } from "react";
 import { fetchMoviesFromDatabase } from "../../NetworkConnections";
 import './SingleMovie.css';
 
+/**
+ * This method is used to render a single movie into the DOM.
+ * It renders the movie's title, name, thumbnail and overview.
+ * @param {*} props object property that was passed to this component when it was being called.
+ * @returns
+ */
 export default function SingleMovie(props) {
-  // useState - to create state
+  // used to store the movie object from the props param.
   const [movie, setMovie] = useState(props.movie);
-  //useEffect- only fire code when the componet ids loaded for the first time
+  
+  // this is a react hook that is used to mimic componentd did Mount state and it is called once when the component has rendered.
+	// This method calls a custom method fetchMoviesFromDatabase that fetches a movie with the given ID from the database.
   useEffect(() => {
     //do some fetching
     if (movie) return;

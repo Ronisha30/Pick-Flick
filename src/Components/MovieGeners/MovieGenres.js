@@ -2,6 +2,11 @@ import { useEffect, useState } from "react";
 import { fetchMoviesFromDatabase } from "../../NetworkConnections";
 import './MovieGenres.css';
 
+/**
+ * This file is used to render all the movie genres from the database.
+ * @param {Object} props the properties that was passed to this component when it was being called.
+ * @returns
+ */
 export default function MovieGenres(props) {
   // useState - to create state
   const [genres, setGenres] = useState([]);

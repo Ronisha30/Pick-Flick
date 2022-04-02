@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchMoviesFromDatabase} from "../../NetworkConnections";
-import SingleMovie from "../SingleMovie/SingleMovie";
 import "./LandingPage.css";
 import MovieList from "../MovieList/MovieList";
-
 
 
 export default function LandingPage(props) {
@@ -11,21 +9,28 @@ export default function LandingPage(props) {
   const [shows, setShows] = useState([]);
   const [comedies, setComedies] = useState([]);
 
-
+  /**
+	 * React hook that is used to fetch movies that is in the comedies category.
+	 */
   useEffect(() => {
     fetchMoviesFromDatabase(props.comedyList,'&with_genres=35').then((res) => setComedies(res.results));
   }, []);
 
-  console.log(comedies)
+  /**
+	 * React hook that is used to fetch movies that is in the movies categories.
+	 */
   useEffect(() => {
     fetchMoviesFromDatabase(props.list).then((res) => setMovies(res.results));
   }, []);
-  console.log(movies);
+	
+  /**
+	 * React hook that is used to fetch movies that is in the tv shows categories.
+	 */
 
   useEffect(() => {
     fetchMoviesFromDatabase(props.tvList).then((res) => setShows(res.results));
   }, []);
-  console.log(shows);
+  
 
   return (
    

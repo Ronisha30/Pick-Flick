@@ -1,0 +1,16 @@
+.movie-list{
+    display: flex;
+    flex-direction: row;
+    overflow:scroll;
+    width: max-content;
+    align-items: center;
+}
+
+button{
+    background-color: white;
+}
+
+
+button:hover{
+    background-color: white;
+}
